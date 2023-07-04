@@ -1,0 +1,39 @@
+body{
+    background-color: lightgrey;
+    text-align: center;
+}
+#display{
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 30%;
+    margin: 1% auto;
+    background-color: whitesmoke;
+}
+form{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
+    margin: 1% auto;
+}
+input{
+    background-color: whitesmoke;
+}
+input::placeholder{
+    text-align: center;
+}
+button{
+    align-self: center;
+    margin: 0.5%;
+    width: 50%;
+    font-size: 110%;
+    border-radius: 20px;
+}
+button:nth-of-type(1){
+    background-color: green ;
+    color: white;
+}
+button:nth-of-type(2){
+    background-color: red ;
+    color: white;
+}
