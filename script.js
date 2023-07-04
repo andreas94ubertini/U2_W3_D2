@@ -10,7 +10,7 @@ const addNewName = function () {
     showName()
     form.reset()
 }
-const deleteName = function (){
+const deleteName = function () {
     localStorage.removeItem('name')
     console.log('eliminato')
     showName()
@@ -22,7 +22,7 @@ const showName = function () {
         let newP = document.createElement('p')
         newP.innerText = localStorage.getItem('name')
         divDisplay.appendChild(newP)
-    }else{
+    } else {
         console.log('nessun nome trovato')
         divDisplay.innerHTML = ''
     }
@@ -33,7 +33,12 @@ form.addEventListener('submit', (e) => {
 })
 addBtn.addEventListener('click', addNewName)
 showName()
-let crono = 0
+let crono = null
+if (sessionStorage.getItem('time passed')) {
+   crono = parseInt(JSON.parse(sessionStorage.getItem('time passed')))
+}else{
+    crono = 0
+}
 const sessionCounter = function () {
     crono++
     sessionStorage.setItem('time passed', crono)
