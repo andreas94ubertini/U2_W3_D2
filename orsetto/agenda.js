@@ -11,9 +11,6 @@ const appointmentDateReference = document.getElementById('appointment-date')
 
 // prendo un riferimento al form, in modo da fermare il suo comportamento di default
 const formReference = document.querySelector('form')
-const deleteButton = function (){
-
-}
 const generateList = function () {
   // riempiamo la lista degli eventi al caricamento della pagina a partire dal mio contenuto del localStorage
   const appointmentsFromLocalStorage = localStorage.getItem('appointments') // come stringa!!
@@ -37,7 +34,7 @@ const generateList = function () {
       let deleteButton = document.createElement('button')
       deleteButton.classList.add('btn', 'btn-danger')
       deleteButton.innerHTML = '<i class="bi bi-trash3-fill"></i>'
-      deleteButton.addEventListener('click', function (e) {
+      deleteButton.addEventListener('click', function () {
         // EXTRA: inserisci qui il codice per eliminare
         // un elemento dalla lista (e dal localStorage!)
 
