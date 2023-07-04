@@ -39,9 +39,14 @@ if (sessionStorage.getItem('time passed')) {
 }else{
     crono = 0
 }
+const timer = function (time){
+    let newP = document.querySelector('#timer p')
+    newP.innerText = time
+}
 const sessionCounter = function () {
     crono++
     sessionStorage.setItem('time passed', crono)
-    console.log('ciao')
+    timer(crono)
 }
+
 setInterval(sessionCounter, 1000)
