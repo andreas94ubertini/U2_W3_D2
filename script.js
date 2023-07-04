@@ -35,7 +35,7 @@ addBtn.addEventListener('click', addNewName)
 showName()
 let crono = null
 if (sessionStorage.getItem('time passed')) {
-   crono = parseInt(JSON.parse(sessionStorage.getItem('time passed')))
+   crono = parseInt(sessionStorage.getItem('time passed'))
 }else{
     crono = 0
 }
